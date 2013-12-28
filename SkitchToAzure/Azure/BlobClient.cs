@@ -5,7 +5,7 @@ using System.Linq;
 using Microsoft.WindowsAzure.Storage;
 using Microsoft.WindowsAzure.Storage.Blob;
 
-namespace BDM.SkitchToAzure
+namespace SkitchToAzure.Azure
 {
     public class BlobClient
     {

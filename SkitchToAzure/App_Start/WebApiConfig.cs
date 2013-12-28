@@ -18,6 +18,7 @@ namespace SkitchToAzure
 
             config.Routes.MapHttpRoute(name: "DefaultApi", routeTemplate: "{controller}/{id}", defaults: new
             {
+                controller = "uploads",
                 id = RouteParameter.Optional
             });
         }

@@ -8,7 +8,7 @@ using System.Net.Http.Headers;
 using System.Threading.Tasks;
 using System.Web.Hosting;
 using System.Web.Http;
-using BDM.SkitchToAzure;
+using SkitchToAzure.Azure;
 
 namespace SkitchToAzure.Controllers
 {
