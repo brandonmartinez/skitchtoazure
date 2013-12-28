@@ -5,8 +5,6 @@ VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SkitchToAzure", "SkitchToAzure\SkitchToAzure.csproj", "{6BA1662F-6031-4C69-9D44-C299F82B96C5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SkitchToAzure.UnitTests", "SkitchToAzure.UnitTests\SkitchToAzure.UnitTests.csproj", "{F3C38C4E-6FDB-470B-9821-9BD087A9635C}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BDM.SkitchToAzure", "BDM.SkitchToAzure\BDM.SkitchToAzure.csproj", "{39E65BD9-2D55-4DEF-BC0F-5EF65C9770DC}"
 EndProject
 Global
@@ -19,10 +17,6 @@ Global
 		{6BA1662F-6031-4C69-9D44-C299F82B96C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6BA1662F-6031-4C69-9D44-C299F82B96C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6BA1662F-6031-4C69-9D44-C299F82B96C5}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F3C38C4E-6FDB-470B-9821-9BD087A9635C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F3C38C4E-6FDB-470B-9821-9BD087A9635C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F3C38C4E-6FDB-470B-9821-9BD087A9635C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F3C38C4E-6FDB-470B-9821-9BD087A9635C}.Release|Any CPU.Build.0 = Release|Any CPU
 		{39E65BD9-2D55-4DEF-BC0F-5EF65C9770DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{39E65BD9-2D55-4DEF-BC0F-5EF65C9770DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{39E65BD9-2D55-4DEF-BC0F-5EF65C9770DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
