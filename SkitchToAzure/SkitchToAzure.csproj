@@ -136,7 +136,12 @@
       <DependentUpon>Web.config</DependentUpon>
     </Content>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\BDM.SkitchToAzure\BDM.SkitchToAzure.csproj">
+      <Project>{39e65bd9-2d55-4def-bc0f-5ef65c9770dc}</Project>
+      <Name>BDM.SkitchToAzure</Name>
+    </ProjectReference>
+  </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
   </ItemGroup>
