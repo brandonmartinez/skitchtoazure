@@ -11,4 +11,4 @@ Skitch, specifcally pre-Evernote versions, would allow screenshots to be capture
 
 ##How Does It Work?
 
-__TODO_
+__TODO__
