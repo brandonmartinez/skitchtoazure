@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using Microsoft.WindowsAzure.Storage;
@@ -42,7 +43,7 @@ namespace BDM.SkitchToAzure
         {
             var blobs = _container.ListBlobs();
 
-            return blobs.Cast<CloudBlockBlob>().Select(x => x.Name);
+            return blobs.Cast<CloudBlockBlob>().OrderByDescending(x => x.Properties.LastModified ?? new DateTimeOffset()).Select(x => x.Name);
         }
 
         public byte[] Get(string id)
