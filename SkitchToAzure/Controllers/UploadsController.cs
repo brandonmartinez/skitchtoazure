@@ -66,6 +66,8 @@ namespace SkitchToAzure.Controllers
 
         public HttpResponseMessage Get(string id)
         {
+            uploadFileIfExists(id);
+
             var blob = _blobClient.Get(id);
             var content = new ByteArrayContent(blob);
             var contentType = "application/octet-stream";
@@ -116,20 +118,7 @@ namespace SkitchToAzure.Controllers
         /// <returns> </returns>
         public HttpResponseMessage Head(string id)
         {
-            Task.Run(() =>
-            {
-                var filepath = Path.Combine(_path, id);
-
-                if(File.Exists(filepath))
-                {
-                    using(var file = File.OpenRead(filepath))
-                    {
-                        _blobClient.Upload(id, file);
-                    }
-
-                    File.Delete(filepath);
-                }
-            });
+            Task.Run(() => uploadFileIfExists(id));
 
             return new HttpResponseMessage
             {
@@ -146,6 +135,25 @@ namespace SkitchToAzure.Controllers
         public void Put(string id, [FromBody] string value)
         {
             throw new NotImplementedException();
+        }
+
+        #endregion
+
+        #region private
+
+        private void uploadFileIfExists(string id)
+        {
+            var filepath = Path.Combine(_path, id);
+
+            if(File.Exists(filepath))
+            {
+                using(var file = File.OpenRead(filepath))
+                {
+                    _blobClient.Upload(id, file);
+                }
+
+                File.Delete(filepath);
+            }
         }
 
         #endregion
