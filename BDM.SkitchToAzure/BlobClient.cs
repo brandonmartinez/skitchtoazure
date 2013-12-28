@@ -42,7 +42,7 @@ namespace BDM.SkitchToAzure
         {
             var blobs = _container.ListBlobs();
 
-            return blobs.Select(x => x.Uri.ToString());
+            return blobs.Cast<CloudBlockBlob>().Select(x => x.Name);
         }
 
         public byte[] Get(string id)
